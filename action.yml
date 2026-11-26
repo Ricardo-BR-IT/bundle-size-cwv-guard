@@ -1,0 +1,33 @@
+name: 'Bundle Size & Core Web Vitals Budget Guard'
+description: 'Single npm dependency imports silently bloat JS/CSS bundles by 200KB+, degrading LCP/FCP and SEO rankings before anyone '
+author: 'Ricardo Vieira Forge Cloud'
+branding:
+  icon: 'activity'
+  color: 'purple'
+inputs:
+  dist-dir:
+    description: 'Build output directory to inspect'
+    required: false
+    default: 'dist'
+  max-js-kb:
+    description: 'Maximum gzipped JS budget in KB'
+    required: false
+    default: '250'
+  max-css-kb:
+    description: 'Maximum gzipped CSS budget in KB'
+    required: false
+    default: '60'
+  max-total-kb:
+    description: 'Maximum total gzipped asset budget in KB'
+    required: false
+    default: '450'
+outputs:
+  total-kb:
+    description: 'Total raw bundle size in KB'
+  gzip-kb:
+    description: 'Total gzipped bundle size in KB'
+  budget-passed:
+    description: 'true if all budgets pass'
+runs:
+  using: 'node20'
+  main: 'src/index.js'

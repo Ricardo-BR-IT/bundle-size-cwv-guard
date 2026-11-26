@@ -1,0 +1,19 @@
+{
+  "name": "@ricardovieiraforge/bundle-size-cwv-guard",
+  "version": "1.0.0",
+  "description": "Bundle Size & Core Web Vitals Budget Guard",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "node --check src/index.js",
+    "test": "node --check src/index.js && node src/index.js --self-test"
+  },
+  "keywords": [
+    "bundle-size",
+    "core-web-vitals",
+    "lcp",
+    "frontend-performance",
+    "gzip-budget"
+  ],
+  "author": "Ricardo Vieira Forge Cloud <souza@usa.com>",
+  "license": "MIT"
+}
